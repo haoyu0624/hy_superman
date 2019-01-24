@@ -7,8 +7,6 @@ package com.hy.basics.Regex;
  */
 
 
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
-
 /**
  * @auther haoy
  * @create 2018/6/7
@@ -25,5 +23,11 @@ public class RegexTest {
         String pattern3 = "all|proxy|trigger";
         boolean matches = result.matches(pattern3);
         System.out.println("matches = " + matches);
+
+
+        String pattern4 = "[a-zA-Z_0-9]{4,16}";
+        String name = null;
+        boolean matches1 = name.matches(pattern4);
+        System.out.println("matches1 = " + matches1);
     }
 }

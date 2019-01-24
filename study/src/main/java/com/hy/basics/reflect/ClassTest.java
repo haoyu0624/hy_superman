@@ -6,8 +6,6 @@ package com.hy.basics.reflect;
  * Time: 10:45
  */
 
-import com.hy.basics.clone.Dog;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.concurrent.Callable;
@@ -48,6 +46,7 @@ public class ClassTest {
         method.invoke(a, 10, 10);
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
         Class<?> aClass = systemClassLoader.loadClass("com.hy.basics.reflect.User");
+
 
 
         ExecutorService executorService = Executors.newFixedThreadPool(5);

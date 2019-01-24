@@ -1,7 +1,5 @@
 package com.hy.result;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-
 import java.io.Serializable;
 
 /**
@@ -19,6 +17,13 @@ public class ResultDO<T> implements Serializable {
     private static final long serialVersionUID = 4227833010077730477L;
 
 
+    public ResultDO() {
+    }
+
+    public ResultDO(int code) {
+        this.code = code;
+    }
+
     /**
      * 返回状态码，默认200
      */
@@ -31,6 +36,12 @@ public class ResultDO<T> implements Serializable {
      * 返回数据
      */
     private T data;
+
+    public static void main(String[] args) {
+        ResultDO r = new ResultDO(500);
+        int code = r.getCode();
+        System.out.println("code = " + code);
+    }
 
 //    /**
 //     * 是否成功，默认失败
