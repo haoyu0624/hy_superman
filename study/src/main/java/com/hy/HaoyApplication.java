@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication(exclude={ HibernateJpaAutoConfiguration.class})
 @RequestMapping("/haoy")
 @EnableAsync
+//@MapperScan("com.hy.dao")
 public class HaoyApplication {
 
     @Autowired
